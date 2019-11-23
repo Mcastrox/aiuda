@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 const app = express();
+var http = require('http');
+var server = http.Server(app)
 
 // connection to db
 mongoose.connect('mongodb://localhost/crud-mongo')
