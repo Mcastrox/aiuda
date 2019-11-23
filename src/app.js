@@ -8,7 +8,7 @@ var http = require('http');
 var server = http.Server(app)
 
 // connection to db
-mongoose.connect('mongodb+srv://mcastrox:picachu720@cluster0-rnzxc.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb://localhost/crud-mongo')
   .then(db => console.log('db connected'))
   .catch(err => console.log(err));
 
