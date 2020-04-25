@@ -20,23 +20,18 @@ class MainActivity : AppCompatActivity() {
         binding.inCounter=inCounter
         binding.outCounter=outCounter
 
-
-        addCounterActions()
-    }
-
-    private fun addCounterActions() {
         binding.apply {
+            inCounter= this@MainActivity.inCounter
+            outCounter=this@MainActivity.outCounter
 
-            buttonAddOut.setOnClickListener {
-                outCounter.count++
-
+            buttonAddIn.setOnClickListener{
+                this@MainActivity.inCounter.count++
+                invalidateAll()
             }
-
-            buttonAddIn.setOnClickListener {
-                inCounter.count++
-
+            buttonAddOut.setOnClickListener {
+                this@MainActivity.outCounter.count++
+                invalidateAll()
             }
         }
     }
-
 }
